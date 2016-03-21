@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+<!-- Autore: Claudia Licheri
+    Matricola:47909
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Come nuovo - oggetti</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Claudia Licheri">
+        <meta name="description" content="ecommerce usato">
+        <meta name="keywords" content="html, css, java, usato, sardegna, ecommerce">
     </head>
     <body>
-        <div>TODO write content</div>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="descrizione.html">Descrizione</a></li>
+            </ul>
+        </nav>
+       
+        <h3>Aggiungi un nuovo articolo!</h3>
+        <form method="post" action="">
+            <label for="nome_item"> Nome articolo: </label>
+            <input type="text" name="nome" id="nome_item" value="" placeholder="articolo"><br/>
+            <label for="url_item"> Inserisci l'immagine: </label>
+            <input type="url" name="image" id="url_item" value="" placeholder="immagini/..."><br/>
+            <label for="descrizione"> Inserisci la descrizione dell'articolo: </label>
+            <textarea rows="3" cols="15" name="descrizione" id="descrizione"> ... </textarea><br/>
+            Prezzo dell'articolo:
+            <input type="number" name="prezzo" min="0"> &euro; <br/>
+            Numero degli articoli disponibili:
+            <input type="number" name="quantita" min="0"><br/>
+            
+
+            <input type="submit" value="Invia" />
+        </form>
     </body>
 </html>
