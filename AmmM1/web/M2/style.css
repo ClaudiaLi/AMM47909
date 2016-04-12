@@ -1,0 +1,412 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-mar-2016, 18.03.32
+    Author     : utente
+*/
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Helvetica Neue' , Arial, sans-serif ;
+    font-size: 18px;
+    color: #1a1a1a; 
+    margin: 0px;        
+}
+/* header & nav */
+
+header {
+    overflow: hidden;
+    background-color: #008060;
+}
+header h1.titolo1 {
+    float: left;
+    margin-left: 10px;
+    color: white;
+    text-align: center;
+    padding: 10px 14px;
+    margin: 0;
+}
+header ul {
+    list-style-type: none;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    
+}
+header li{
+    float: left;
+    display: inline-block;
+}
+header li#login{
+    float: right;
+}
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+header li a:hover:not(.active) {
+    background-color: #00664d;
+}
+
+/* sidebar */
+aside {
+    float: left;
+    width: 18%;
+    padding-left: 1%;
+    height: 100%;
+}
+aside ul{
+    list-style-type: disc;  
+}
+/* content */
+#content_bar{
+    margin: 20px 5px 100px 20%;
+    padding: 10px;
+}
+#content{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+/* titles */
+.titolo {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #00b386;
+}
+h1 {
+    font-size: 26px;
+    line-height: 26px;
+}
+h2 {
+    font-size: 22px;
+    line-height: 22px;
+}
+h3 {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* link 
+unvisited link */
+a:link {
+    color: #ffffff;
+}
+
+/* visited link */
+a:visited {
+    color: #a8b6bf;
+}
+
+/* mouse over link */
+a:hover {
+    color: #ffffff;
+}
+
+/* selected link */
+a:active {
+    color: #1affc6;
+}
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* forms */
+div.form {
+    position: relative;
+    background: #ffffff;
+    width: 50%;
+    margin: 0 auto 100px;
+    padding: 30px; 
+}
+form, .form>h3{
+    padding: 10px;
+}
+
+#login_form{
+    width: 360px;
+}
+.form input , .form textarea{
+    background: #f2f2f2;
+    width: 100%;
+    border: 1px solid #008060;
+    border-radius: 4px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.form label{
+    position: relative;
+    bottom: 5px;
+}
+.form button {
+    background: #008060;
+    width: 100%;
+    border: 1px;
+    border-radius: 4px;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 15px;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #00b386;
+}
+
+/* tabel */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+tr.even{
+    background-color: #99ffe6;
+}
+tr.odd{
+    background-color: #ffffff;
+}
+td.even_cart:hover {
+    background-color: #80ffdf
+}
+td.odd_cart:hover {
+    background-color: #f2f2f2
+}
+th {
+    background-color: #008060;
+    color: #ffffff;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* footer */
+footer{
+    bottom: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 0px;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    background-color: #a8b6bf;
+    color: #ffffff;
+}
+footer p{
+    margin: 0;
+    padding: 5px;
+}
+
+/* responsive */
+/* Larghezze maggiori o uguali a 1024px */
+@media only screen and (min-width: 1024px)
+{
+     /* sidebar */
+    aside {
+        float: left;
+        width: 20%;
+        padding: 0;
+        height: 100%;
+    }
+    aside ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    aside ul li{
+        padding: 5px;
+    }
+    aside ul li a:link{
+        color: #008060;
+    }
+    aside ul li a:visited{
+        color: #a8b6bf;
+    }
+    aside ul li a:hover{
+        color: #00664d;
+    }
+    aside ul li a:hover{
+        color: #00b386;
+    }
+    aside ul li:hover{
+        background-color: #fae596;
+    }
+}
+/* Larghezze comprese tra 1024px e 480px */
+@media only screen and (min-width: 480px) and (max-width: 1024px)
+{
+    header{
+        margin-bottom: 0px;
+        
+    }
+    header ul {
+        list-style-type: none;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    .titolo1{
+        width: 60%;
+    }
+    h1.titolo1{
+        text-align: left;
+    }
+    header li{
+        float: left;
+        display: inline-block;
+        
+    }
+    header li#login{
+        float: right;
+        width: 30%;
+    }
+    /* sidebar */
+    aside {
+        float: left;
+        width: 22%;
+        padding: 0;
+        height: 100%;
+    }
+    aside ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    aside ul li{
+        padding: 5px;
+    }
+    aside ul li a:link{
+        color: #008060;
+    }
+    aside ul li a:visited{
+        color: #a8b6bf;
+    }
+    aside ul li a:hover{
+        color: #00664d;
+    }
+    aside ul li a:hover{
+        color: #00b386;
+    }
+    aside ul li:hover{
+        background-color: #fae596;
+    }
+
+/* content */
+    #content_bar{
+        margin: 20px 5px 100px 24%;
+        padding: 10px;
+    }
+    #content{
+        margin-top: 20px;
+        margin-bottom: 100px;
+        padding: 10px;
+    }
+}
+/* Larghezze minori o uguali a 480px */
+@media only screen and (max-width: 480px)
+{
+    header{
+        margin-bottom: 0px;
+    }
+    header ul {
+        list-style-type: none;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header li{
+        float: left;
+        display: block;
+        width: 100%;
+    }
+    header li#login{
+        float: right;
+        width: 30%;
+    }
+/* sidebar */
+    aside{
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+    .dropbtn {
+        background-color: #00b386;
+        color: white; 
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        margin: 0px;
+    }
+
+    .dropdown {
+        position: static;
+        display: block;
+        width: 100%;
+        margin: 0;
+        height: 50px;  
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fae596;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: #00b386 1px;
+        overflow: auto;
+    }
+
+    .dropdown-content li {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content li:hover {
+        background-color: #f8da6d;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+/* content */
+    .titolo{
+        text-align: center;
+    }
+    #content_bar{
+        margin: 60px 1% 100px;
+        padding: 2px;
+    }
+    #content{
+        margin-top: 20px;
+        margin-bottom: 100px;
+        padding: 0px;
+        
+    }
+    /* form */
+    div.form {
+        position: relative;
+        background: #ffffff;
+        width: 100%;
+        margin: 0;
+        padding: 0px; 
+    }
+    div#login_form{
+        width: 100%;    
+    }
+}

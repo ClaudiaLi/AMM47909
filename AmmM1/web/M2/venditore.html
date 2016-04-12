@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Autore: Claudia Licheri
+    Matricola:47909
+-->
+<html> 
+    <head>
+        <title>Come nuovo - oggetti</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Claudia Licheri">
+        <meta name="description" content="ecommerce usato">
+        <meta name="keywords" content="html, css, java, usato, sardegna, ecommerce">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    </head>
+    <body>
+        <header>
+            <h1 class="titolo1" >Come Nuovo</h1>
+            <nav>
+                <ul>
+                    <li id="login"><a href="login.html">Login</a></li>
+                    <li><a href="descrizione.html">Descrizione</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content">
+        <div class="form" >
+            <h3>Aggiungi un nuovo articolo!</h3>
+            <form method="post" action="">
+                <label for="nome_item"> Nome articolo: </label>
+                <input type="text" name="nome" id="nome_item" value="" placeholder="articolo"><br/>
+                <label for="url_item"> Inserisci l'immagine: </label>
+                <input type="url" name="image" id="url_item" value="" placeholder="immagini/..."><br/>
+                <label> Inserisci la descrizione dell'articolo: </label>
+                <textarea rows="3" cols="15" name="description_item" id="descrizione" placeholder="..."></textarea><br/>
+                <label> Prezzo dell'articolo: </label>
+                <input type="number" name="price_item" min="0" step="0.01" value="0.00">
+                <label>Numero degli articoli disponibili: </label>
+                <input type="number" name="amount_item" min="0" value="0"><br/>
+                <button type="submit">Invia</button>
+            </form>
+        </div>
+        </div>
+        <div id="footer">
+            <footer>
+                <p> Dove ci trovi:<br/>
+                    Via Oristano, 10 
+                    09127 Cagliari (CA)</p>
+            </footer>
+        </div>
+    </body>
+</html>
