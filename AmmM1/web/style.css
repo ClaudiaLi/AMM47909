@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /* 
     Created on : 30-mar-2016, 18.03.32
-    Author     : utente
+    Author     : Claudia
 */
 
 body {
@@ -150,7 +150,7 @@ form, .form>h3{
     position: relative;
     bottom: 5px;
 }
-.form button {
+.form button, button#conferma {
     background: #008060;
     width: 100%;
     border: 1px;
@@ -158,12 +158,31 @@ form, .form>h3{
     padding: 15px;
     color: #ffffff;
     font-size: 15px;
+    margin-top: 10px;
 }
-.form button:hover,.form button:active,.form button:focus {
+.form button, button#conferma:hover,.form button, button#conferma:active,.form button, button#conferma:focus {
     background: #00b386;
 }
+button#conferma{
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* options */
+select {
+  position: relative;
+}
 
-/* tabel */
+.item-select{
+   background: transparent;
+   width: 100%;
+   padding: 5px;
+   font-size: 20px;
+   border-radius: 4px;
+   height: 50px;
+}
+
+/* table */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -174,18 +193,26 @@ th, td {
     text-align: center;
     font-weight: bold;
 }
-tr.even{
+tr:nth-child(2n){
     background-color: #99ffe6;
 }
-tr.odd{
+tr:nth-child(2n+1){
     background-color: #ffffff;
 }
-td.even_cart:hover {
-    background-color: #80ffdf
+a.cart:link {
+    color: #00b386;
 }
-td.odd_cart:hover {
-    background-color: #f2f2f2
+
+/* mouse over link */
+a.cart:hover {
+    color: #ffffff;
 }
+
+/* selected link */
+a.cart:active {
+    color: #1affc6;
+}
+
 th {
     background-color: #008060;
     color: #ffffff;
@@ -206,10 +233,58 @@ footer{
     overflow: hidden;
     background-color: #a8b6bf;
     color: #ffffff;
+    position: relative;
 }
 footer p{
     margin: 0;
-    padding: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* access denied */
+.denied{
+    color: #990000;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.denied h3{
+    color: #990000;
+    font-weight: bold;
+    font-size: 24px;
+}
+.error{
+    color: #990000;
+    font-weight: bold;
+    font-size: 18px;
+}
+.ok{
+    color: #004d00;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Impostazioni per messaggi di errore o di successo, e campi sbagliati*/
+.successMessage, .errorMessage{
+    text-align: center;
+    border: 2px dashed;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.errorMessage{
+    background-color: rgba(255, 161, 123, 0.7);
+    border-color: red;
+}
+
+.successMessage{
+    background-color: springgreen;
+    border-color: green;
+}
+
+.campoErrato{
+    background-color: rgba(255, 161, 123, 0.5)
 }
 
 /* responsive */

@@ -1,8 +1,13 @@
+<%-- 
+    Document   : login
+    Created on : 29-apr-2016, 18.23.14
+    Author     : utente
+--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<!-- Autore: Claudia Licheri
-    Matricola:47909
--->
-<html> 
+<html>
     <head>
         <title>Come Nuovo - login </title>
         <meta charset="UTF-8">
@@ -16,31 +21,36 @@
         <header>
             <h1 class="titolo1" >Come Nuovo</h1>
             <nav>
-               <ul>
+                <ul>
                     <li><a href="descrizione.html">Descrizione</a></li>
                     <li><a href="cliente.html">Cliente</a></li>
                     <li><a href="venditore.html">Venditore</a></li>
                 </ul>
             </nav>
         </header>
+
         <div id="content">
             <div class="form" id="login_form">
                 <h3>Login</h3>
-                <form action="" method="post">
-                    <input name="user" id="user" type="text" value="" placeholder="Nome utente"/><br/>
-                    <input name="pswd" id="pswd" type="password" value="" placeholder="Password"/><br/>
-                    <label for="remember_me"> Ricordami</label>
-                    <input type="checkbox" name="remember_me" id="remember_me"><br/>
-                    <button type="submit">Accedi</button>
+                <form action="login.html" method="post">
+
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" value="" />
+                    <label for="pswd">Password</label>
+                    <input type="password" name="pswd" id="pswd" value="" />
+
+                    <button type="submit" value="Login" name="submit">Accedi</button>
+
                 </form>
+
+                <c:if test="${errore == true}">
+                    <p class="error">Accesso fallito!</p>
+                </c:if>
+
             </div>
         </div>
-        <div id="footer">
-            <footer>
-                <p> Dove ci trovi:<br/>
-                    Via Oristano, 10 
-                    09127 Cagliari (CA)</p>
-            </footer>
-        </div>
+        <jsp:include page="footer.jsp" />
+
     </body>
 </html>
+
